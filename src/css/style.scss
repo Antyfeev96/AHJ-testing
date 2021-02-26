@@ -1,44 +1,51 @@
 .cards {
-
   &__title {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   &__logos {
-      margin-top: 10px;
+    margin-top: 10px;
 
-      img {
-          width: 50px;
-          height: 32px;
-      }
+    img {
+      width: 50px;
+      height: 32px;
+    }
+  }
+
+  &__logo {
+      filter: grayscale(1);
+  }
+
+  &__logo_active {
+      filter: none;
   }
 }
 
 .form {
-    display: flex;
-    margin-top: 25px;
-    align-items: center;
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
 
-    &__input {
-        width: 200px;
-        height: 50px;
-        border-radius: 5px;
-        border-style: solid;
-        padding-left: 15px;
+  &__input {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border-style: solid;
+    padding-left: 15px;
+  }
+
+  &__button {
+    margin-left: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(211, 157, 56);
+    border-radius: 5px;
+    border-style: solid;
+    color: white;
+
+    &:hover {
+      width: 155px;
+      height: 55px;
     }
-
-    &__button {
-        margin-left: 15px;
-        width: 150px;
-        height: 50px;
-        background-color: rgb(211, 157, 56);
-        border-radius: 5px;
-        border-style: solid;
-        color: white;
-
-        &:hover {
-            width: 155px;
-            height: 55px;
-        }
-    }
+  }
 }
