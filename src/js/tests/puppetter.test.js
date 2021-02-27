@@ -9,7 +9,7 @@ describe('Card checker', () => {
   beforeAll(async () => {
     browser = await puppetter.launch({
       headless: false,
-      slowMo: 100,
+      slowMo: 200,
       devtools: true,
     });
     page = await browser.newPage();

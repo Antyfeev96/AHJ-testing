@@ -9,6 +9,9 @@ branches:
 cache: node_modules  # кеширование
 
 install:
+  - sudo apt-get install -y xvfb
+  - sudo apt-get -y install xorg xvfb gtk2-engines-pixbuf
+  - sudo apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
   - npm install  # команда установки зависимостей
 
 build: off  # отключаем встроенную в appveyor систему сборки
