@@ -6,7 +6,7 @@ jest.setTimeout(30000);
 describe('Card checker', () => {
   let browser = null;
   let page = null;
-  const baseUrl = `http://localhost:${config.server.port}`;
+  const baseUrl = `http://127.0.0.1:${config.server.port}`;
   beforeAll(async () => {
     browser = await puppetter.launch({
       headless: true,
