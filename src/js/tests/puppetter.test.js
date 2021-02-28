@@ -8,9 +8,7 @@ describe('Card checker', () => {
   const baseUrl = 'http://localhost:9000';
   beforeAll(async () => {
     browser = await puppetter.launch({
-      headless: false,
       slowMo: 200,
-      devtools: true,
     });
     page = await browser.newPage();
   });
