@@ -7,4 +7,6 @@ module.exports = {
     command: 'yarn babel-node src/server/main.js',
     port: 4444,
   },
+  browser: 'chromium',
+  browserContext: 'default',
 };
