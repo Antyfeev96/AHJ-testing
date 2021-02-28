@@ -1,11 +1,12 @@
 import puppetter from 'puppeteer';
 import AppCreator from '../appCreator';
+import '../../../jest-puppeteer.config';
 
 jest.setTimeout(30000);
 describe('Card checker', () => {
   let browser = null;
   let page = null;
-  const baseUrl = 'http://127.0.0.1:9000';
+  const baseUrl = 'http://localhost:9000';
   beforeAll(async () => {
     browser = await puppetter.launch({
       // headless: true,
