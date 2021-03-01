@@ -8,12 +8,12 @@ export default class AppCreator {
     <div class="cards">
       <div class="cards__title">Check your credit card number</div>
       <div class="cards__logos">
-          <img src="../images/visa.png" alt="visa" class="cards__logo">
-          <img src="../images/mastercard.png" alt="mastercard" class="cards__logo">
-          <img src="../images/american_express.png" alt="american_express" class="cards__logo">
-          <img src="../images/discover.png" alt="discover" class="cards__logo">
-          <img src="../images/jcb.png" alt="jcb" class="cards__logo">
-          <img src="../images/dinersclub.jpg" alt="dinersclub" class="cards__logo">
+          <img src="./images/visa.png" alt="visa" class="cards__logo">
+          <img src="./images/mastercard.png" alt="mastercard" class="cards__logo">
+          <img src="./images/american_express.png" alt="american_express" class="cards__logo">
+          <img src="./images/discover.png" alt="discover" class="cards__logo">
+          <img src="./images/jcb.png" alt="jcb" class="cards__logo">
+          <img src="./images/dinersclub.jpg" alt="dinersclub" class="cards__logo">
       </div>
     </div>
     <form class="form">
