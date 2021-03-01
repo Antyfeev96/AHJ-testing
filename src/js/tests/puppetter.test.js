@@ -1,13 +1,23 @@
 import puppetter from 'puppeteer';
+import { fork } from 'child_process';
 import AppCreator from '../appCreator';
-import config from '../../../jest-puppeteer.config';
 
 jest.setTimeout(30000);
 describe('Card checker', () => {
   let browser = null;
   let page = null;
-  const baseUrl = `http://127.0.0.1:${config.server.port}`;
+  let server = null;
+  const baseUrl = 'http://localhost:9000';
   beforeAll(async () => {
+    server = fork(`${__dirname}/e2e/e2e.server.js`);
+    await new Promise((resolve, reject) => {
+      server.on('error', reject);
+      server.on('message', (message) => {
+        if (message === 'ok') {
+          resolve();
+        }
+      });
+    });
     browser = await puppetter.launch({
       // headless: true,
       // slowMo: 200,
@@ -17,6 +27,7 @@ describe('Card checker', () => {
   });
   afterAll(async () => {
     await browser.close();
+    server.kill();
   });
   describe('test', () => {
     test('card checker', async () => {
