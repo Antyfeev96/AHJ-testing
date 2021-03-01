@@ -25,6 +25,10 @@ const ESLintPlugin = require('eslint-webpack-plugin');
  */
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+  },
   mode: 'development',
 
   plugins: [
@@ -48,6 +52,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: 'src/images/[name].[ext]',
+            },
           },
         ],
       },
