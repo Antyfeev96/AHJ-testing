@@ -14,6 +14,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 /*
  * We've enabled HtmlWebpackPlugin for you! This generates a html
@@ -26,9 +27,6 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-  },
   mode: 'development',
 
   plugins: [
@@ -38,6 +36,11 @@ module.exports = {
       template: 'index.html',
     }),
     new ESLintPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/images', to: './images' },
+      ],
+    }),
   ],
 
   module: {
